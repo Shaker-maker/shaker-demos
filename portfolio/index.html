@@ -538,6 +538,7 @@
             padding: 12px 16px;
             background: rgba(0, 0, 0, .04);
             border-bottom: 1px solid var(--line);
+            position: relative;
         }
 
         .demo-chrome .dot {
@@ -1699,15 +1700,17 @@
             border-color: #fff
         }
 
+        /* ============ LIVE / PREVIEW BADGE ============ */
         .demo-status {
             position: absolute;
-            top: 76px;
-            left: 22px;
+            top: 10px;
+            left: auto;
+            right: 68px;
             z-index: 4;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            padding: 5px 11px;
+            gap: 6px;
+            padding: 5px 10px;
             border-radius: 999px;
             font-family: var(--mono);
             font-size: 9.5px;
@@ -1735,6 +1738,14 @@
 
         .demo-status.preview .status-dot {
             background: #6B6B6B
+        }
+
+        @media(max-width:480px) {
+            .demo-status {
+                right: 64px;
+                font-size: 9px;
+                padding: 4px 9px;
+            }
         }
 
         body.modal-open {
@@ -1871,12 +1882,12 @@
                             <span class="demo-tag">M-Pesa</span>
                         </div>
                         <h3>Chafua POS</h3>
-                        <p class="one-liner">Full table-ordering and POS engine with simulated STK push M-Pesa flows
-                            and kitchen-ready receipt layouts.</p>
+                        <p class="one-liner">Point-of-sale for restaurants and bars. Staff open a table, add orders and
+                            take payment through an M-Pesa STK push (sandbox), then print the receipt.</p>
                         <div class="demo-stack">
-                            <span>Real-time state</span>
-                            <span>M-Pesa sandbox</span>
-                            <span>Receipt printing</span>
+                            <span>Table orders</span>
+                            <span>M-Pesa payments</span>
+                            <span>Receipts</span>
                         </div>
                         <a href="https://chafua-pos.netlify.app" target="_blank" rel="noopener" class="demo-cta live"
                             data-cta>
@@ -1923,12 +1934,13 @@
                             <span class="demo-tag">Nail Art</span>
                         </div>
                         <h3>Gold &amp; Gloss Nails</h3>
-                        <p class="one-liner">Luxury nail atelier landing page with a visual booking engine — premium gel
-                            sets, acrylic extensions and custom nail art booked direct, no receptionist in the loop.</p>
+                        <p class="one-liner">A booking-first page for a nail studio. Clients pick a set, choose a time
+                            slot and confirm on WhatsApp — the salon gets ready-to-serve bookings without a receptionist
+                            in the loop.</p>
                         <div class="demo-stack">
-                            <span>Same-day slots</span>
-                            <span>Deposit flow</span>
-                            <span>WhatsApp confirm</span>
+                            <span>Service &amp; slot picker</span>
+                            <span>WhatsApp confirmation</span>
+                            <span>Mobile-first</span>
                         </div>
                         <a href="https://darlingnails.netlify.app/" target="_blank" rel="noopener" class="demo-cta live"
                             data-cta>
@@ -1975,12 +1987,13 @@
                             <span class="demo-tag">Leads</span>
                         </div>
                         <h3>Apex Ground</h3>
-                        <p class="one-liner">High-contrast landing system with instant WhatsApp lead distribution and a
-                            filterable class schedule.</p>
+                        <p class="one-liner">A landing page built to sign up gym members. Visitors browse the week's
+                            classes, compare plans and claim a free day pass — the lead arrives in the gym's WhatsApp
+                            with their name and preferred time.</p>
                         <div class="demo-stack">
-                            <span>Schedule filter</span>
-                            <span>Pricing toggle</span>
-                            <span>WhatsApp handoff</span>
+                            <span>Class schedule</span>
+                            <span>Plan pricing</span>
+                            <span>Free day-pass leads</span>
                         </div>
                         <a href="https://apex-ground.netlify.app/" target="_blank" rel="noopener" class="demo-cta live"
                             data-cta>
@@ -1995,8 +2008,8 @@
                     <div class="demo-arrow">→</div>
                 </div>
 
-                <!-- 04 · AURA PRACTICE -->
-                <div class="demo-card reveal" data-category="professional" data-title="Aura Practice"
+                <!-- 04 · AURA DENTAL -->
+                <div class="demo-card reveal" data-category="professional" data-title="Aura Dental"
                     data-live-url="https://auraadental-clinic.netlify.app/" data-preview-class="prev-aura" tabindex="0"
                     role="button">
                     <div class="demo-status live"><span class="status-dot"></span>Live</div>
@@ -2025,13 +2038,15 @@
                             <span class="demo-tag">Clinic / Legal</span>
                             <span class="demo-tag">Scheduler</span>
                         </div>
-                        <h3>Aura Practice</h3>
-                        <p class="one-liner">Frictionless multi-step appointment scheduler and triage architecture for
-                            clinics, dentists and law firms.</p>
+                        <h3>Aura Dental</h3>
+                        <p class="one-liner">A clinic site that turns visitors into booked consultations. Patients
+                            check whether their insurer is covered, choose a reason and a time in three steps, and the
+                            request goes to WhatsApp for confirmation. The same layout works for law firms and other
+                            practices.</p>
                         <div class="demo-stack">
                             <span>Insurance checker</span>
                             <span>3-step booking</span>
-                            <span>Reference tickets</span>
+                            <span>WhatsApp confirmation</span>
                         </div>
                         <a href="https://auraadental-clinic.netlify.app/" target="_blank" rel="noopener"
                             class="demo-cta live" data-cta>
@@ -2077,12 +2092,13 @@
                             <span class="demo-tag">Compliance</span>
                         </div>
                         <h3>CipherPoint Advisory</h3>
-                        <p class="one-liner">Threat-posture dashboard and ODPC compliance landing system with hardened
-                            HTTP headers and CSP.</p>
+                        <p class="one-liner">A landing page for a cybersecurity consultancy that builds trust with
+                            compliance-minded buyers. It covers the services, the method and an interactive risk
+                            estimator that scores a business's exposure in the browser, with nothing sent anywhere.</p>
                         <div class="demo-stack">
                             <span>Risk estimator</span>
-                            <span>Input sanitization</span>
-                            <span>Full CSP</span>
+                            <span>Data Protection Act focus</span>
+                            <span>Confidential contact form</span>
                         </div>
                         <a href="https://guardiansofgalaxies.netlify.app/" target="_blank" rel="noopener"
                             class="demo-cta live" data-cta>
@@ -2442,9 +2458,6 @@
 
         /* ============================================================
            LIVE DEMO BUTTONS
-           Stop click bubbling so clicking the button doesn't open the lightbox.
-           Buttons with a real href open in a new tab. Buttons with no URL
-           are marked "Coming soon" and disabled by the JS below if empty.
            ============================================================ */
         document.querySelectorAll('.demo-cta').forEach(btn => {
             btn.addEventListener('click', e => {
