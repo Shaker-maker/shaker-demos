@@ -2008,8 +2008,8 @@
                             <span>3-step booking</span>
                             <span>Reference tickets</span>
                         </div>
-                        <a href="https://auraadental-clinic.netlify.app/" target="_blank" rel="noopener" class="demo-cta live"
-                            data-cta>
+                        <a href="https://auraadental-clinic.netlify.app/" target="_blank" rel="noopener"
+                            class="demo-cta live" data-cta>
                             Live Demo
                             <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
                                 <path d="M14 4h6v6M20 4l-9 9M20 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1h5"
@@ -2023,8 +2023,8 @@
 
                 <!-- 05 · CIPHERPOINT -->
                 <div class="demo-card reveal" data-category="security" data-title="CipherPoint Advisory"
-                    data-live-url="https://guardiansofgalaxies.netlify.app/" data-preview-class="prev-cipher" tabindex="0"
-                    role="button">
+                    data-live-url="https://guardiansofgalaxies.netlify.app/" data-preview-class="prev-cipher"
+                    tabindex="0" role="button">
                     <div class="demo-status live"><span class="status-dot"></span>Live</div>
                     <div class="demo-frame">
                         <div class="demo-chrome">
@@ -2059,8 +2059,8 @@
                             <span>Input sanitization</span>
                             <span>Full CSP</span>
                         </div>
-                        <a href="https://guardiansofgalaxies.netlify.app/" target="_blank" rel="noopener" class="demo-cta live"
-                            data-cta>
+                        <a href="https://guardiansofgalaxies.netlify.app/" target="_blank" rel="noopener"
+                            class="demo-cta live" data-cta>
                             Live Demo
                             <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
                                 <path d="M14 4h6v6M20 4l-9 9M20 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1h5"
@@ -2324,6 +2324,69 @@
             </div>
         </div>
     </div>
+
+    <!-- Back to Portfolio chip -->
+    <a href="https://shaker-demos.netlify.app/" id="backToPortfolio" aria-label="Back to Shaker portfolio">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+        <span>Back to Portfolio</span>
+    </a>
+    <style>
+        #backToPortfolio {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 9999;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .01em;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(10, 10, 10, .72);
+            border: 1px solid rgba(255, 255, 255, .14);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px -8px rgba(0, 0, 0, .4);
+            transition: transform .2s cubic-bezier(.2, .7, .3, 1),
+                background .2s,
+                border-color .2s;
+        }
+
+        #backToPortfolio:hover {
+            transform: translateY(-2px);
+            background: rgba(10, 10, 10, .88);
+            border-color: rgba(255, 255, 255, .28);
+        }
+
+        #backToPortfolio svg {
+            transition: transform .25s cubic-bezier(.2, .7, .3, 1);
+        }
+
+        #backToPortfolio:hover svg {
+            transform: translateX(-3px);
+        }
+
+        @media(max-width: 480px) {
+            #backToPortfolio span {
+                display: none;
+            }
+
+            #backToPortfolio {
+                padding: 9px;
+                width: 36px;
+                height: 36px;
+                justify-content: center;
+            }
+        }
+    </style>
 
     <script>
         /* ============================================================
