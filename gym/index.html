@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apex Ground — Nairobi's Premier Strength & Conditioning Lab</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>">
+<meta name="description" content="High-performance group training and elite personal coaching in Kilimani, Nairobi. Claim your free day pass." />
+
+<!-- ===== Open Graph / WhatsApp link preview ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Apex Ground" />
+<meta property="og:title" content="Apex Ground — Nairobi's Premier Strength & Conditioning Lab" />
+<meta property="og:description" content="High-performance group training and elite personal coaching in Kilimani. Claim your free day pass — first session on us." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
+<meta property="og:url" content="https://apexground.co.ke/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apex Ground — Nairobi's Premier Strength & Conditioning Lab" />
+<meta name="twitter:description" content="High-performance group training and elite personal coaching in Kilimani. Claim your free day pass." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0F0F11;
+  --surface:#18181B;
+  --surface-2:#1F1F23;
+  --line:#27272A;
+  --volt:#CCFF00;
+  --volt-dim:#D4F63C;
+  --text:#FAFAFA;
+  --muted:#A1A1AA;
+  --radius:18px;
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ============ TYPO ============ */
+h1,h2,h3,.display{
+  font-family:'Oswald',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:-.015em;
+  line-height:.98;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--volt);margin-bottom:18px;
+}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--volt);opacity:.6}
+.sec-title{font-size:clamp(2rem,5.2vw,3.4rem);margin-bottom:14px}
+.sec-sub{color:var(--muted);max-width:560px;font-size:15.5px}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:700;font-size:14px;letter-spacing:.01em;
+  padding:15px 26px;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s,background .22s,color .22s,border-color .22s;
+  white-space:nowrap;
+}
+.btn-volt{background:var(--volt);color:#0F0F11}
+.btn-volt:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 0 4px rgba(204,255,0,.14), 0 14px 34px -8px rgba(204,255,0,.45);
+}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--volt);color:var(--volt);transform:translateY(-2px)}
+.btn-block{width:100%}
+.btn-sm{padding:11px 20px;font-size:13px}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:120;
+  background:rgba(15,15,17,.7);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s, background .3s;
+}
+.nav.scrolled{border-bottom-color:var(--line);background:rgba(15,15,17,.92)}
+.nav-inner{
+  max-width:var(--maxw);margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo{
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:19px;
+  letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:7px;
+}
+.logo .dot{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 12px var(--volt)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{
+  font-size:13.5px;font-weight:600;color:var(--muted);
+  letter-spacing:.03em;transition:color .2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:-6px;height:1px;width:0;
+  background:var(--volt);transition:width .25s;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:150px 0 90px;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;
+  background:#101012 url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  filter:grayscale(.6) contrast(1.18) brightness(.72);
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(15,15,17,.62) 0%, rgba(15,15,17,.78) 42%, #0F0F11 100%);
+}
+.hero-glow{
+  position:absolute;width:760px;height:760px;border-radius:50%;
+  background:radial-gradient(circle, rgba(204,255,0,.13) 0%, transparent 62%);
+  top:-140px;right:-220px;pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--volt);border:1px solid rgba(204,255,0,.32);
+  background:rgba(204,255,0,.06);
+  padding:8px 16px;border-radius:999px;margin-bottom:26px;
+}
+.hero h1{
+  font-size:clamp(2.9rem,8.6vw,5.9rem);
+  max-width:14ch;margin-bottom:22px;
+}
+.hero h1 .accent{
+  color:var(--volt);
+  text-shadow:0 0 42px rgba(204,255,0,.28);
+}
+.hero p.lead{
+  color:#C9C9CF;font-size:clamp(15px,2.2vw,17.5px);
+  max-width:52ch;margin-bottom:34px;
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px}
+.trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.avatars{display:flex}
+.avatar{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#0F0F11;
+  border:2px solid var(--bg);margin-left:-11px;
+}
+.avatar:first-child{margin-left:0}
+.trust-text{font-size:13px;color:var(--muted);line-height:1.45}
+.trust-text strong{color:var(--text);display:block;font-size:13.5px}
+.stars{color:var(--volt);letter-spacing:1px}
+
+/* ============ STATS RIBBON ============ */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 22px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat b{
+  display:block;font-family:'Oswald',sans-serif;font-weight:700;
+  font-size:clamp(1.9rem,4.4vw,2.9rem);color:var(--volt);line-height:1;letter-spacing:-.01em;
+}
+.stat span{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:9px;display:block}
+@media(max-width:700px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+}
+
+/* ============ SECTIONS ============ */
+section{padding:96px 0}
+.sec-head{margin-bottom:52px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+
+/* ============ PROGRAMS ============ */
+.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.programs-grid{grid-template-columns:1fr}}
+.program{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;position:relative;
+  transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s,box-shadow .35s;
+}
+.program:hover{
+  transform:translateY(-7px);
+  border-color:rgba(204,255,0,.42);
+  box-shadow:0 24px 50px -24px rgba(204,255,0,.32);
+}
+.program-img{
+  height:190px;background-size:cover;background-position:center;position:relative;
+  filter:grayscale(1) contrast(1.15) brightness(.72);
+  transition:filter .45s ease,transform .6s ease;
+}
+.program:hover .program-img{filter:grayscale(.15) contrast(1.1) brightness(.88);transform:scale(1.04)}
+.program-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(24,24,27,.15) 0%, rgba(24,24,27,.95) 100%);
+}
+.program-num{
+  position:absolute;top:16px;left:20px;z-index:2;
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.16em;color:var(--volt);
+  background:rgba(15,15,17,.72);border:1px solid rgba(204,255,0,.3);
+  padding:5px 12px;border-radius:999px;backdrop-filter:blur(6px);
+}
+.program-body{padding:26px 26px 30px}
+.program h3{font-size:1.45rem;margin-bottom:11px;letter-spacing:.01em}
+.program p{color:var(--muted);font-size:14.5px;line-height:1.68}
+.program-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:20px;
+  font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--volt);
+}
+.program-link svg{transition:transform .25s}
+.program:hover .program-link svg{transform:translateX(5px)}
+
+/* ============ SCHEDULE ============ */
+.schedule{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.day-tabs{display:flex;gap:8px;margin-bottom:30px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.day-tabs::-webkit-scrollbar{display:none}
+.day-tab{
+  flex:0 0 auto;padding:11px 22px;border-radius:999px;
+  background:transparent;border:1px solid var(--line);color:var(--muted);
+  font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;transition:.22s;
+}
+.day-tab:hover{border-color:rgba(204,255,0,.4);color:var(--text)}
+.day-tab.active{background:var(--volt);border-color:var(--volt);color:#0F0F11}
+.class-row{
+  display:grid;grid-template-columns:96px 1fr auto auto;gap:22px;align-items:center;
+  padding:20px 22px;border:1px solid var(--line);border-radius:14px;
+  background:var(--bg);margin-bottom:10px;
+  transition:border-color .25s,transform .25s,background .25s;
+  animation:rowIn .4s cubic-bezier(.2,.7,.3,1) backwards;
+}
+.class-row:hover{border-color:rgba(204,255,0,.42);transform:translateX(5px);background:#131316}
+.class-time{font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;letter-spacing:.02em;color:var(--volt)}
+.class-name{font-weight:700;font-size:15px}
+.class-coach{font-size:12.5px;color:var(--muted);margin-top:2px}
+.pill{
+  font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;
+}
+.pill.volt{border-color:rgba(204,255,0,.4);color:var(--volt);background:rgba(204,255,0,.07)}
+.spots{font-size:12.5px;color:var(--muted);white-space:nowrap;min-width:104px;text-align:right}
+@media(max-width:760px){
+  .class-row{grid-template-columns:72px 1fr;gap:14px;row-gap:12px;padding:18px}
+  .class-row .pill{grid-column:2}
+  .spots{grid-column:2;text-align:left;min-width:0}
+}
+
+/* ============ COACHES ============ */
+.coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.coaches-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.coaches-grid{grid-template-columns:1fr}}
+.coach{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 26px 32px;
+  transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s,box-shadow .35s;
+}
+.coach:hover{
+  transform:translateY(-6px);
+  border-color:rgba(204,255,0,.4);
+  box-shadow:0 22px 46px -24px rgba(204,255,0,.3);
+}
+.coach-avatar{
+  width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:19px;letter-spacing:.04em;
+  color:var(--volt);background:rgba(204,255,0,.08);
+  border:1px solid rgba(204,255,0,.35);
+  margin-bottom:18px;
+}
+.coach-name{font-family:'Oswald',sans-serif;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
+.coach-role{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--volt);margin-top:7px}
+.coach-bio{font-size:13.5px;color:var(--muted);margin-top:12px;line-height:1.6}
+
+/* ============ PRICING ============ */
+.toggle-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.toggle{
+  display:inline-flex;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:5px;position:relative;
+}
+.toggle button{
+  position:relative;z-index:2;border:none;background:transparent;color:var(--muted);
+  padding:10px 24px;border-radius:999px;font-size:13px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:color .25s;
+}
+.toggle button.active{color:#0F0F11}
+.toggle-slider{
+  position:absolute;top:5px;left:5px;height:calc(100% - 10px);
+  background:var(--volt);border-radius:999px;
+  transition:transform .32s cubic-bezier(.3,.8,.3,1), width .32s cubic-bezier(.3,.8,.3,1);
+}
+.save-badge{
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--volt);border:1px solid rgba(204,255,0,.35);
+  background:rgba(204,255,0,.06);padding:6px 13px;border-radius:999px;
+  opacity:0;transform:translateY(4px);transition:.3s;
+}
+.save-badge.show{opacity:1;transform:none}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+.price-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:22px;
+  padding:34px 30px 36px;position:relative;
+  transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .35s,box-shadow .35s;
+}
+.price-card:hover{transform:translateY(-7px);border-color:rgba(204,255,0,.4);box-shadow:0 26px 54px -26px rgba(204,255,0,.3)}
+.price-card.featured{
+  border-color:var(--volt);
+  background:linear-gradient(180deg,#1C1F14 0%, var(--surface) 55%);
+  box-shadow:0 0 0 1px rgba(204,255,0,.15), 0 30px 70px -34px rgba(204,255,0,.55);
+}
+@media(min-width:901px){
+  .price-card.featured{transform:scale(1.035)}
+  .price-card.featured:hover{transform:scale(1.035) translateY(-7px)}
+}
+.featured-tag{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--volt);color:#0F0F11;font-size:10.5px;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap;
+}
+.plan-name{font-family:'Oswald',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.price{display:flex;align-items:baseline;gap:7px;margin-bottom:6px;flex-wrap:wrap}
+.price .cur{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.08em}
+.price .amt{font-family:'Oswald',sans-serif;font-weight:700;font-size:2.9rem;letter-spacing:-.02em;line-height:1}
+.price .per{font-size:13.5px;color:var(--muted);font-weight:600}
+.bill-note{font-size:12.5px;color:var(--muted);margin-bottom:26px;min-height:19px}
+.plan-feats{list-style:none;margin-bottom:30px;display:flex;flex-direction:column;gap:13px}
+.plan-feats li{display:flex;gap:11px;font-size:14px;color:#D4D4D8;line-height:1.5;align-items:flex-start}
+.plan-feats li svg{flex:0 0 auto;margin-top:3px}
+.plan-feats li.dim{color:#6E6E76}
+.plan-feats li.dim svg path{stroke:#52525B}
+
+/* ============ FINAL CTA ============ */
+.final-cta{position:relative;overflow:hidden;padding:0}
+.cta-panel{
+  position:relative;border-radius:26px;overflow:hidden;
+  border:1px solid var(--line);
+  background:#111113 url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding:70px 54px;
+}
+.cta-panel::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg, rgba(15,15,17,.96) 0%, rgba(15,15,17,.88) 45%, rgba(15,15,17,.55) 100%);
+}
+.cta-panel::after{
+  content:'';position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(204,255,0,.18) 0%,transparent 65%);
+  bottom:-260px;right:-120px;
+}
+.cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:900px){.cta-inner{grid-template-columns:1fr;gap:40px} .cta-panel{padding:48px 26px}}
+.cta-inner h2{font-size:clamp(2.1rem,5.4vw,3.5rem);margin-bottom:16px}
+.cta-inner h2 .accent{color:var(--volt)}
+.cta-inner p{color:#B9B9C0;font-size:15.5px;max-width:44ch}
+.cta-points{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:11px}
+.cta-points li{display:flex;gap:10px;font-size:14px;color:#D4D4D8;align-items:center}
+.cta-points li span{color:var(--volt);font-weight:800}
+
+/* ============ FORM ============ */
+.form-card{
+  background:rgba(24,24,27,.92);backdrop-filter:blur(12px);
+  border:1px solid var(--line);border-radius:20px;padding:32px;
+}
+.form-card h3{font-size:1.2rem;letter-spacing:.06em;margin-bottom:6px}
+.form-card .hint{font-size:13px;color:var(--muted);margin-bottom:22px}
+.field-group{margin-bottom:15px}
+.field-group label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field{
+  width:100%;background:#0F0F11;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--text);font-family:inherit;font-size:15px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.field::placeholder{color:#5A5A62}
+.field:focus{outline:none;border-color:var(--volt);box-shadow:0 0 0 3px rgba(204,255,0,.13)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip input{position:absolute;opacity:0;width:0;height:0}
+.chip span{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid var(--line);border-radius:12px;padding:14px;
+  font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;transition:.22s;
+}
+.chip span:hover{border-color:rgba(204,255,0,.4);color:var(--text)}
+.chip input:checked + span{border-color:var(--volt);color:var(--volt);background:rgba(204,255,0,.08)}
+.fineprint{font-size:11.5px;color:#6E6E76;text-align:center;margin-top:14px;line-height:1.5}
+
+/* ============ PASS BADGE ============ */
+.pass{
+  border:1px dashed rgba(204,255,0,.5);border-radius:18px;
+  background:linear-gradient(160deg,rgba(204,255,0,.09),rgba(204,255,0,.02));
+  padding:26px;text-align:center;
+  animation:pop .45s cubic-bezier(.2,.8,.3,1);
+}
+.pass-top{font-size:10.5px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--volt);margin-bottom:14px}
+.pass-code{
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:2rem;
+  letter-spacing:.05em;line-height:1;margin-bottom:8px;color:var(--text);
+}
+.pass-meta{font-size:12.5px;color:var(--muted);margin-bottom:20px}
+.pass-meta b{color:var(--volt)}
+.pass-divider{height:1px;background:repeating-linear-gradient(90deg,var(--line) 0 8px, transparent 8px 16px);margin:18px 0}
+.pass-name{font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--surface);border-top:1px solid var(--line);padding:66px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:50px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr;gap:34px}}
+.foot-brand .logo{margin-bottom:16px}
+.foot-brand p{color:var(--muted);font-size:14px;max-width:34ch}
+.foot-col h4{font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--volt);margin-bottom:18px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.foot-col li,.foot-col a{font-size:14px;color:var(--muted);transition:color .2s}
+.foot-col a:hover{color:var(--volt)}
+.hours-row{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;color:var(--muted);max-width:280px}
+.hours-row b{color:var(--text);font-weight:600}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:26px;
+  display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+  font-size:12.5px;color:#6E6E76;
+}
+
+/* ============ WA FLOAT ============ */
+.wa-float{
+  position:fixed;bottom:22px;right:22px;z-index:110;
+  width:54px;height:54px;border-radius:50%;
+  background:var(--volt);color:#0F0F11;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 32px -8px rgba(204,255,0,.55);
+  transition:transform .25s;
+}
+.wa-float:hover{transform:scale(1.09)}
+
+/* ============ MODAL ============ */
+.modal{
+  position:fixed;inset:0;z-index:300;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(6,6,8,.82);backdrop-filter:blur(8px);
+}
+.modal.open{display:flex}
+.modal-card{
+  width:100%;max-width:468px;max-height:92vh;overflow-y:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:22px;
+  padding:34px;position:relative;
+  animation:pop .34s cubic-bezier(.2,.8,.3,1);
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;
+  background:#0F0F11;border:1px solid var(--line);color:var(--muted);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:17px;line-height:1;transition:.2s;
+}
+.modal-close:hover{color:var(--volt);border-color:var(--volt)}
+
+/* ============ ANIM ============ */
+/* Reveal uses `translate` so `transform` stays free for hover lifts. */
+.reveal{
+  opacity:0;
+  translate:0 26px;
+  transition:opacity .75s ease, translate .75s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.in{opacity:1;translate:none}
+
+/* Cards need reveal + their hover transitions merged. */
+.program.reveal,
+.price-card.reveal{
+  transition:opacity .75s ease,
+             translate .75s cubic-bezier(.2,.7,.3,1),
+             transform .35s cubic-bezier(.2,.7,.3,1),
+             border-color .35s,
+             box-shadow .35s;
+}
+
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(12px)}to{opacity:1;transform:none}}
+@keyframes rowIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;translate:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">APEX<span class="dot"></span>GROUND</a>
+    <div class="nav-links">
+      <a href="#programs">Classes</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#coaches">Trainers</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <button class="btn btn-volt btn-sm" onclick="openModal()">Claim 1-Day Pass</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-badge">📍 Nairobi's Premier Strength &amp; Conditioning Lab</div>
+    <h1>Built Different.<br><span class="accent">Trained Stronger.</span></h1>
+    <p class="lead">High-performance group training and elite personal coaching engineered to break your plateaus — in Kilimani, Nairobi.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-volt" onclick="openModal()">
+        Claim Your Free Day Pass
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#schedule" class="btn btn-ghost">View Class Schedule</a>
+    </div>
+    <div class="trust">
+      <div class="avatars">
+        <div class="avatar" style="background:#CCFF00">JK</div>
+        <div class="avatar" style="background:#A3E635">AM</div>
+        <div class="avatar" style="background:#84CC16">NW</div>
+        <div class="avatar" style="background:#65A30D;color:#fff">DO</div>
+      </div>
+      <div class="trust-text">
+        <strong><span class="stars">★★★★★</span> Voted top functional box in 2024</strong>
+        Trusted by 500+ Nairobi athletes
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<section class="stats" style="padding:0">
+  <div class="stats-grid">
+    <div class="stat"><b data-count="500" data-suffix="+">0</b><span>Active Athletes</span></div>
+    <div class="stat"><b data-count="6">0</b><span>Certified Coaches</span></div>
+    <div class="stat"><b data-count="22">0</b><span>Weekly Sessions</span></div>
+    <div class="stat"><b data-count="100" data-suffix="%">0</b><span>Results Tracked</span></div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section id="programs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Training Programs</div>
+        <h2 class="sec-title">Pick Your Battlefield</h2>
+        <p class="sec-sub">Every session is coach-led, capped at 14 athletes, and scaled to your level. No ego, just output.</p>
+      </div>
+    </div>
+
+    <div class="programs-grid">
+      <article class="program reveal">
+        <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=900&q=80')">
+          <span class="program-num">01 / HIIT</span>
+        </div>
+        <div class="program-body">
+          <h3>Functional HIIT</h3>
+          <p>High-octane metabolic conditioning designed for lean muscle, lung capacity and an engine that refuses to quit.</p>
+          <span class="program-link">45 min · All levels
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="program reveal">
+        <!-- Swapped: was the same Unsplash photo as the hero -->
+        <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80')">
+          <span class="program-num">02 / STRENGTH</span>
+        </div>
+        <div class="program-body">
+          <h3>Strength &amp; Power</h3>
+          <p>Barbell basics, Olympic lifting and progressive overload under the eye of a certified strength coach.</p>
+          <span class="program-link">60 min · Intermediate
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </article>
+
+      <article class="program reveal">
+        <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80')">
+          <span class="program-num">03 / 1-ON-1</span>
+        </div>
+        <div class="program-body">
+          <h3>1-on-1 Performance</h3>
+          <p>Tailored macro tracking, posture correction and sport-specific programming built around your body and calendar.</p>
+          <span class="program-link">By appointment
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHEDULE ================= -->
+<section class="schedule" id="schedule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">This Week</div>
+        <h2 class="sec-title">Class Schedule</h2>
+        <p class="sec-sub">Doors open 5:30 AM. Filter by day to find your slot — first session is always free.</p>
+      </div>
+      <button class="btn btn-volt btn-sm" onclick="openModal()">Book a Slot</button>
+    </div>
+
+    <div class="day-tabs" id="dayTabs"></div>
+    <div id="scheduleList"></div>
+  </div>
+</section>
+
+<!-- ================= COACHES ================= -->
+<section id="coaches">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">The Team</div>
+        <h2 class="sec-title">Meet Your Coaches</h2>
+        <p class="sec-sub">Certified, tested, and obsessed with your progress. Every coach on the floor owns a specialty — find the one that fits your goal.</p>
+      </div>
+    </div>
+
+    <div class="coaches-grid reveal">
+      <article class="coach">
+        <div class="coach-avatar">MW</div>
+        <div class="coach-name">Coach Wanjiru</div>
+        <div class="coach-role">Head of Conditioning</div>
+        <p class="coach-bio">Former national 800m athlete. Builds the engine work that makes everything else easier.</p>
+      </article>
+
+      <article class="coach">
+        <div class="coach-avatar">JO</div>
+        <div class="coach-name">Coach Otieno</div>
+        <div class="coach-role">Strength &amp; Olympic Lifting</div>
+        <p class="coach-bio">IWF-certified. Ten years coaching barbell technique, from first pull to platform PR.</p>
+      </article>
+
+      <article class="coach">
+        <div class="coach-avatar">AA</div>
+        <div class="coach-name">Coach Achieng</div>
+        <div class="coach-role">HIIT &amp; Metabolic</div>
+        <p class="coach-bio">Runs the most feared 45 minutes in Kilimani. Scaled for every level, brutal for all.</p>
+      </article>
+
+      <article class="coach">
+        <div class="coach-avatar">BM</div>
+        <div class="coach-name">Coach Mwangi</div>
+        <div class="coach-role">Boxing &amp; Combat</div>
+        <p class="coach-bio">Ex-amateur boxer. Footwork, pads, and conditioning that translates to any sport.</p>
+      </article>
+
+      <article class="coach">
+        <div class="coach-avatar">NN</div>
+        <div class="coach-name">Coach Njeri</div>
+        <div class="coach-role">Mobility &amp; Recovery</div>
+        <p class="coach-bio">Physio background. Keeps the athletes on the floor and off the injury list.</p>
+      </article>
+
+      <article class="coach">
+        <div class="coach-avatar">DK</div>
+        <div class="coach-name">Coach Kiprop</div>
+        <div class="coach-role">Power &amp; Performance</div>
+        <p class="coach-bio">Sprint and jump specialist. Translates raw strength into speed you can actually use.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Membership</div>
+        <h2 class="sec-title">Transparent Pricing</h2>
+        <p class="sec-sub">No joining fee. No lock-in contracts. Cancel anytime from the app.</p>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle" id="toggle">
+          <div class="toggle-slider" id="toggleSlider"></div>
+          <button class="active" data-period="monthly">Monthly</button>
+          <button data-period="annual">Annual</button>
+        </div>
+        <span class="save-badge" id="saveBadge">Save 2 months</span>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- BASIC -->
+      <div class="price-card reveal">
+        <div class="plan-name">Basic Access</div>
+        <div class="price">
+          <span class="cur">KES</span>
+          <span class="amt" data-monthly="6,500" data-annual="65,000">6,500</span>
+          <span class="per" data-monthly="/mo" data-annual="/yr">/mo</span>
+        </div>
+        <div class="bill-note" data-monthly="Billed monthly" data-annual="Billed annually">Billed monthly</div>
+        <ul class="plan-feats">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Full open gym floor access</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Locker + shower amenities</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Standard app tracking</li>
+          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#52525B" stroke-width="2.6" stroke-linecap="round"/></svg> Group classes</li>
+          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#52525B" stroke-width="2.6" stroke-linecap="round"/></svg> Coach assessments</li>
+        </ul>
+        <button class="btn btn-ghost btn-block" onclick="openModal()">Start Basic</button>
+      </div>
+
+      <!-- UNLIMITED -->
+      <div class="price-card featured reveal">
+        <span class="featured-tag">Most Popular</span>
+        <div class="plan-name" style="color:var(--volt)">Unlimited All-Access</div>
+        <div class="price">
+          <span class="cur">KES</span>
+          <span class="amt" data-monthly="12,000" data-annual="120,000">12,000</span>
+          <span class="per" data-monthly="/mo" data-annual="/yr">/mo</span>
+        </div>
+        <div class="bill-note" data-monthly="Billed monthly" data-annual="Billed annually">Billed monthly</div>
+        <ul class="plan-feats">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Unlimited HIIT &amp; Strength classes</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly 1-on-1 coach assessment</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Guest pass (2× per month)</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Nutrition starter guide</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Recovery bar access</li>
+        </ul>
+        <button class="btn btn-volt btn-block" onclick="openModal()">Go Unlimited</button>
+      </div>
+
+      <!-- CLASS PACK — exempt from the monthly/annual toggle -->
+      <div class="price-card fixed reveal">
+        <div class="plan-name">10-Class Pack</div>
+        <div class="price">
+          <span class="cur">KES</span>
+          <span class="amt">9,000</span>
+          <span class="per">/60 days</span>
+        </div>
+        <div class="bill-note">Valid for 60 days</div>
+        <ul class="plan-feats">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Pay-as-you-go flexibility</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> All group classes included</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#CCFF00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Shareable with one buddy</li>
+          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#52525B" stroke-width="2.6" stroke-linecap="round"/></svg> Open gym floor</li>
+          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#52525B" stroke-width="2.6" stroke-linecap="round"/></svg> Coach assessments</li>
+        </ul>
+        <button class="btn btn-ghost btn-block" onclick="openModal()">Buy Class Pack</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta" id="claim">
+  <div class="wrap">
+    <div class="cta-panel reveal">
+      <div class="cta-inner">
+        <div>
+          <div class="eyebrow">No Card Required</div>
+          <h2>Your First Session<br><span class="accent">Is On Us.</span></h2>
+          <p>Drop your details below. We'll WhatsApp your guest pass and locker code instantly — valid for 24 hours from your first visit.</p>
+          <ul class="cta-points">
+            <li><span>✓</span> Full access to any group class</li>
+            <li><span>✓</span> Free body composition scan</li>
+            <li><span>✓</span> Zero pressure, zero contracts</li>
+          </ul>
+        </div>
+
+        <div class="form-card" id="inlineFormCard">
+          <!--
+            Lead capture options:
+            - Netlify Forms: add  data-netlify="true"  to <form> and a hidden
+              <input type="hidden" name="form-name" value="daypass" />.
+            - Formspree: set  action="https://formspree.io/f/YOUR_ID"  method="POST"
+              and remove the JS preventDefault if you want a server-side submit.
+            - WhatsApp-only (current): the "Send to WhatsApp" button on the pass
+              badge is the lead handoff — no backend required.
+          -->
+          <form class="lead-form" novalidate>
+            <h3>Claim Your Day Pass</h3>
+            <p class="hint">Takes 20 seconds. No spam, ever.</p>
+
+            <div class="field-group">
+              <label for="name-inline">Full Name</label>
+              <input class="field" id="name-inline" name="name" type="text" placeholder="e.g. Brian Kamau" required />
+            </div>
+
+            <div class="field-group">
+              <label for="wa-inline">WhatsApp Number</label>
+              <input class="field" id="wa-inline" name="phone" type="tel" placeholder="07XX XXX XXX" required />
+            </div>
+
+            <div class="field-group">
+              <label>Preferred Time</label>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="time" value="Morning" checked /><span>☀ Morning</span></label>
+                <label class="chip"><input type="radio" name="time" value="Evening" /><span>🌙 Evening</span></label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-volt btn-block" style="margin-top:8px">
+              Get My Guest Pass
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="fineprint">By submitting you agree to receive a one-time WhatsApp message from Apex Ground.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">APEX<span class="dot"></span>GROUND</div>
+        <p>Strength &amp; conditioning lab. Kilimani, Nairobi. Built for people who train like it matters.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li>3rd Floor, Wood Avenue Plaza</li>
+          <li>Kilimani, Nairobi, Kenya</li>
+          <li><a href="tel:+254712345678">+254 712 345 678</a></li>
+          <li><a href="mailto:hello@apexground.co.ke">hello@apexground.co.ke</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Opening Hours</h4>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="hours-row"><span>Mon – Fri</span><b>5:30 – 21:30</b></div>
+          <div class="hours-row"><span>Saturday</span><b>6:00 – 18:00</b></div>
+          <div class="hours-row"><span>Sunday</span><b>8:00 – 14:00</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Apex Ground Fitness Studio. Demo build.</span>
+      <a href="https://wa.me/254712345678?text=Hi%20Apex%20Ground%2C%20I%27d%20like%20to%20know%20more%20about%20membership." target="_blank" rel="noopener" style="color:var(--volt);font-weight:700">Chat on WhatsApp →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WA FLOAT ================= -->
+<a class="wa-float" href="https://wa.me/254712345678?text=Hi%20Apex%20Ground%2C%20I%27d%20like%20to%20book%20a%20free%20day%20pass." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.55 0-3.07-.42-4.4-1.2l-.32-.19-3.26.85.87-3.18-.2-.33a8.16 8.16 0 01-1.25-4.35c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.24 8.24z"/></svg>
+</a>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div id="modalBody">
+      <form class="lead-form" novalidate>
+        <h3>Claim Your Free Day Pass</h3>
+        <p class="hint">We'll WhatsApp your pass instantly. No card, no commitment.</p>
+
+        <div class="field-group">
+          <label for="name-modal">Full Name</label>
+          <input class="field" id="name-modal" name="name" type="text" placeholder="e.g. Brian Kamau" required />
+        </div>
+
+        <div class="field-group">
+          <label for="wa-modal">WhatsApp Number</label>
+          <input class="field" id="wa-modal" name="phone" type="tel" placeholder="07XX XXX XXX" required />
+        </div>
+
+        <div class="field-group">
+          <label>Preferred Time</label>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="time" value="Morning" checked /><span>☀ Morning</span></label>
+            <label class="chip"><input type="radio" name="time" value="Evening" /><span>🌙 Evening</span></label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-volt btn-block" style="margin-top:8px">Get My Guest Pass</button>
+        <p class="fineprint">One-time WhatsApp message. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   1. SCHEDULE DATA + RENDER
+   ============================================================ */
+const SCHEDULE = {
+  Mon: [
+    {t:'06:00', n:'Functional HIIT',    c:'Coach Wanjiru', tag:'HIIT',     s:'6 spots left'},
+    {t:'12:30', n:'Strength & Power',   c:'Coach Otieno',  tag:'Strength', s:'4 spots left'},
+    {t:'18:30', n:'Functional HIIT',    c:'Coach Achieng', tag:'HIIT',     s:'Waitlist'},
+    {t:'19:30', n:'Boxing Conditioning',c:'Coach Mwangi',  tag:'Combat',   s:'8 spots left'}
+  ],
+  Tue: [
+    {t:'06:00', n:'Strength & Power',   c:'Coach Otieno',  tag:'Strength', s:'5 spots left'},
+    {t:'07:15', n:'Functional HIIT',    c:'Coach Wanjiru', tag:'HIIT',     s:'9 spots left'},
+    {t:'17:30', n:'Mobility & Recovery',c:'Coach Njeri',   tag:'Recovery', s:'12 spots left'},
+    {t:'18:30', n:'Strength & Power',   c:'Coach Kiprop',  tag:'Strength', s:'3 spots left'}
+  ],
+  Wed: [
+    {t:'06:00', n:'Functional HIIT',    c:'Coach Achieng', tag:'HIIT',     s:'7 spots left'},
+    {t:'12:30', n:'Olympic Lifting',    c:'Coach Otieno',  tag:'Strength', s:'4 spots left'},
+    {t:'18:30', n:'Functional HIIT',    c:'Coach Wanjiru', tag:'HIIT',     s:'2 spots left'},
+    {t:'19:30', n:'Core & Conditioning',c:'Coach Njeri',   tag:'HIIT',     s:'10 spots left'}
+  ],
+  Thu: [
+    {t:'06:00', n:'Strength & Power',   c:'Coach Otieno',  tag:'Strength', s:'6 spots left'},
+    {t:'17:30', n:'Boxing Conditioning',c:'Coach Mwangi',  tag:'Combat',   s:'5 spots left'},
+    {t:'18:30', n:'Functional HIIT',    c:'Coach Achieng', tag:'HIIT',     s:'Waitlist'},
+    {t:'19:30', n:'Mobility & Recovery',c:'Coach Njeri',   tag:'Recovery', s:'11 spots left'}
+  ],
+  Fri: [
+    {t:'06:00', n:'Functional HIIT',    c:'Coach Wanjiru', tag:'HIIT',     s:'8 spots left'},
+    {t:'12:30', n:'Strength & Power',   c:'Coach Otieno',  tag:'Strength', s:'3 spots left'},
+    {t:'18:00', n:'Friday Night Burn',  c:'Coach Achieng', tag:'HIIT',     s:'4 spots left'}
+  ],
+  Sat: [
+    {t:'07:00', n:'Weekend Warrior',    c:'Coach Mwangi',  tag:'HIIT',     s:'9 spots left'},
+    {t:'08:30', n:'Team Strength',      c:'Coach Kiprop',  tag:'Strength', s:'6 spots left'},
+    {t:'10:00', n:'Open Gym + Coaching',c:'All Coaches',   tag:'Open',     s:'Unlimited'}
+  ]
+};
+/* Totals: 22 sessions · 6 named coaches (Wanjiru, Otieno, Achieng, Mwangi, Njeri, Kiprop). */
+
+const dayTabs   = document.getElementById('dayTabs');
+const listEl    = document.getElementById('scheduleList');
+const days      = Object.keys(SCHEDULE);
+
+days.forEach((day, i) => {
+  const b = document.createElement('button');
+  b.className = 'day-tab' + (i === 0 ? ' active' : '');
+  b.textContent = day;
+  b.dataset.day = day;
+  b.onclick = () => {
+    document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+    b.classList.add('active');
+    renderDay(day);
+  };
+  dayTabs.appendChild(b);
+});
+
+function renderDay(day) {
+  listEl.innerHTML = SCHEDULE[day].map((c, i) => `
+    <div class="class-row" style="animation-delay:${i * 55}ms">
+      <div class="class-time">${c.t}</div>
+      <div>
+        <div class="class-name">${c.n}</div>
+        <div class="class-coach">${c.c}</div>
+      </div>
+      <span class="pill ${c.tag === 'HIIT' ? 'volt' : ''}">${c.tag}</span>
+      <span class="spots">${c.s}</span>
+    </div>
+  `).join('');
+}
+renderDay(days[0]);
+
+/* ============================================================
+   2. PRICING TOGGLE
+   ============================================================ */
+const toggleBtns  = document.querySelectorAll('#toggle button');
+const slider      = document.getElementById('toggleSlider');
+const saveBadge   = document.getElementById('saveBadge');
+
+function moveSlider(btn) {
+  slider.style.width = btn.offsetWidth + 'px';
+  slider.style.transform = `translateX(${btn.offsetLeft - 5}px)`;
+}
+
+function setPeriod(period) {
+  /* .fixed = the 10-class pack, which has no monthly/annual variant. */
+  document.querySelectorAll('.price-card:not(.fixed)').forEach(card => {
+    const amt  = card.querySelector('.amt');
+    const per  = card.querySelector('.per');
+    const note = card.querySelector('.bill-note');
+    if (!amt) return;
+    amt.textContent  = amt.dataset[period];
+    per.textContent  = per.dataset[period];
+    note.textContent = note.dataset[period];
+  });
+  saveBadge.classList.toggle('show', period === 'annual');
+}
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    toggleBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    moveSlider(btn);
+    setPeriod(btn.dataset.period);
+  });
+});
+
+window.addEventListener('load', () => moveSlider(document.querySelector('#toggle button.active')));
+window.addEventListener('resize', () => moveSlider(document.querySelector('#toggle button.active')));
+
+/* ============================================================
+   3. MODAL
+   ============================================================ */
+const modal     = document.getElementById('modal');
+const modalBody = document.getElementById('modalBody');
+const modalFormHTML = modalBody.innerHTML;
+
+function openModal() {
+  modalBody.innerHTML = modalFormHTML;
+  bindForm(modalBody.querySelector('.lead-form'));
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => modalBody.querySelector('input')?.focus(), 120);
+}
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ============================================================
+   4. LEAD CAPTURE → PASS BADGE → WHATSAPP
+   ============================================================ */
+const WA_NUMBER = '254712345678'; // ← replace with the gym's real number (country code, no +)
+
+/* Escape user input before it touches innerHTML. */
+const esc = s => String(s).replace(/[&<>"']/g, c => ({
+  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+}[c]));
+
+/* Pass code: APX-YYMMDD-XXXX so the front desk has a date to verify against.
+   In a real deployment, write this row to the gym's CRM/Sheets so the code
+   is checkable, not just decorative. */
+function makePassNumber() {
+  const d = new Date();
+  const ymd = String(d.getFullYear()).slice(2)
+            + String(d.getMonth() + 1).padStart(2, '0')
+            + String(d.getDate()).padStart(2, '0');
+  const rand = Math.floor(1000 + Math.random() * 9000);
+  return `APX-${ymd}-${rand}`;
+}
+
+function buildPass(name, phone, time, passNo) {
+  /* Name + preferred time ride along in the WhatsApp message so the gym's
+     first message is already a qualified lead. */
+  const msg = `Hi Apex Ground, I'd like to redeem my Day Pass (Pass #${passNo}).\n`
+            + `Name: ${name}\n`
+            + `Preferred time: ${time}\n`
+            + `Phone: ${phone}`;
+  const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  const firstName = esc((name || 'Athlete').split(' ')[0]);
+
+  return `
+    <div class="pass">
+      <div class="pass-top">Guest Pass · Confirmed</div>
+      <div class="pass-code">#${esc(passNo)}</div>
+      <div class="pass-meta">Valid for <b>24 hours</b> from first check-in</div>
+      <div class="pass-divider"></div>
+      <div class="pass-name">${firstName}</div>
+      <a class="btn btn-volt btn-block" style="margin-top:20px" href="${waLink}" target="_blank" rel="noopener">
+        Send to WhatsApp
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="btn btn-ghost btn-block" style="margin-top:10px" onclick="closeModal()">Done</button>
+      <p class="fineprint" style="margin-top:16px">Show this code at the front desk. Locker code sent via WhatsApp.</p>
+    </div>
+  `;
+}
+
+function bindForm(form) {
+  if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name  = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const time  = form.querySelector('[name="time"]:checked')?.value || 'Morning';
+
+    if (!name || phone.replace(/\D/g, '').length < 9) {
+      const bad = !name ? form.querySelector('[name="name"]') : form.querySelector('[name="phone"]');
+      bad.style.borderColor = '#FF5500';
+      bad.focus();
+      setTimeout(() => bad.style.borderColor = '', 1600);
+      return;
+    }
+
+    const passNo = makePassNumber();
+    const html   = buildPass(name, phone, time, passNo);
+
+    console.log('%c🟢 NEW LEAD', 'color:#CCFF00;font-weight:bold', { name, phone, time, passNo });
+
+    const host = form.parentElement;
+    host.innerHTML = html;
+  });
+}
+
+bindForm(document.querySelector('#inlineFormCard .lead-form'));
+
+/* ============================================================
+   5. NAV SCROLL STATE
+   ============================================================ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 24);
+}, {passive:true});
+
+/* ============================================================
+   6. SCROLL REVEAL
+   ============================================================ */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((en, i) => {
+    if (en.isIntersecting) {
+      setTimeout(() => en.target.classList.add('in'), i * 90);
+      revealObs.unobserve(en.target);
+    }
+  });
+}, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ============================================================
+   7. STAT COUNTERS
+   ============================================================ */
+const statObs = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el     = en.target;
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const dur    = 1400;
+    const start  = performance.now();
+
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    statObs.unobserve(el);
+  });
+}, {threshold:0.5});
+
+document.querySelectorAll('.stat b').forEach(el => statObs.observe(el));
+</script>
+</body>
+</html>
